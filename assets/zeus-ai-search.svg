@@ -1,0 +1,62 @@
+<svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Zeus AI minimax search flow</title>
+  <desc id="desc">A minimax tree showing move generation, board simulation, heuristic scoring, and alpha-beta pruning.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2L10 6L2 10" fill="#38BDF8"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="520" rx="24" fill="#0F172A"/>
+  <text x="54" y="76" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">Search strategy</text>
+  <text x="54" y="112" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="18">Zeus looks ahead, scores future boards, and skips branches that cannot improve the result.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="462" y="150" width="176" height="70" rx="18" fill="#182235" stroke="#38BDF8"/>
+    <text x="550" y="181" fill="#F8FAFC" font-size="19" font-weight="800">Current board</text>
+    <text x="550" y="205" fill="#CBD5E1" font-size="14">max player</text>
+
+    <rect x="160" y="286" width="166" height="68" rx="16" fill="#182235" stroke="#FACC15"/>
+    <text x="243" y="316" fill="#F8FAFC" font-size="18" font-weight="800">Move A</text>
+    <text x="243" y="339" fill="#CBD5E1" font-size="14">score +18</text>
+
+    <rect x="467" y="286" width="166" height="68" rx="16" fill="#182235" stroke="#FACC15"/>
+    <text x="550" y="316" fill="#F8FAFC" font-size="18" font-weight="800">Move B</text>
+    <text x="550" y="339" fill="#CBD5E1" font-size="14">score +31</text>
+
+    <rect x="774" y="286" width="166" height="68" rx="16" fill="#182235" stroke="#FACC15"/>
+    <text x="857" y="316" fill="#F8FAFC" font-size="18" font-weight="800">Move C</text>
+    <text x="857" y="339" fill="#CBD5E1" font-size="14">pruned</text>
+
+    <rect x="92" y="416" width="132" height="52" rx="14" fill="#111827" stroke="#64748B"/>
+    <text x="158" y="447" fill="#CBD5E1" font-size="15">leaf score</text>
+    <rect x="250" y="416" width="132" height="52" rx="14" fill="#111827" stroke="#64748B"/>
+    <text x="316" y="447" fill="#CBD5E1" font-size="15">leaf score</text>
+
+    <rect x="434" y="416" width="132" height="52" rx="14" fill="#111827" stroke="#64748B"/>
+    <text x="500" y="447" fill="#CBD5E1" font-size="15">leaf score</text>
+    <rect x="592" y="416" width="132" height="52" rx="14" fill="#111827" stroke="#64748B"/>
+    <text x="658" y="447" fill="#CBD5E1" font-size="15">leaf score</text>
+
+    <rect x="806" y="416" width="132" height="52" rx="14" fill="#2B1624" stroke="#FB7185"/>
+    <text x="872" y="447" fill="#FCA5A5" font-size="15" font-weight="800">skipped</text>
+  </g>
+
+  <path d="M510 220L270 286" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M550 220V286" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M590 220L830 286" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M225 354L168 416" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M262 354L306 416" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M532 354L500 416" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M568 354L652 416" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M858 354L872 416" stroke="#FB7185" stroke-width="2" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="62" y="154" width="232" height="80" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="88" y="187" fill="#F8FAFC" font-size="18" font-weight="800">Heuristic ingredients</text>
+    <text x="88" y="214" fill="#94A3B8" font-size="15">pieces, kings, center, edge</text>
+
+    <rect x="806" y="154" width="232" height="80" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="832" y="187" fill="#F8FAFC" font-size="18" font-weight="800">Alpha-beta pruning</text>
+    <text x="832" y="214" fill="#94A3B8" font-size="15">stop searching weak paths</text>
+  </g>
+</svg>

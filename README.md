@@ -7,6 +7,7 @@
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Minimax](https://img.shields.io/badge/Search-Minimax-38BDF8?style=for-the-badge)
 ![Alpha Beta](https://img.shields.io/badge/Pruning-Alpha--Beta-FACC15?style=for-the-badge)
+![Tests](https://github.com/rehanjetha/zeus-ai/actions/workflows/tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/License-Source_Available--NC-A78BFA?style=for-the-badge)
 
 Zeus AI is a Python checkers project built around a minimax-based player with
@@ -33,6 +34,12 @@ batch of simulated games between the two.
   <img src="assets/zeus-ai-search.svg" alt="Zeus AI minimax search flow" width="100%">
 </p>
 
+## Simulation Preview
+
+<p align="center">
+  <img src="assets/zeus-ai-board-snapshot.png" alt="Zeus AI board snapshot with a forced capture" width="80%">
+</p>
+
 ## Project Structure
 
 ```text
@@ -54,6 +61,17 @@ python CheckersSim.py
 
 By default, `CheckersSim.py` runs 100 games between Zeus and the random player,
 then prints the win and draw totals.
+
+## Testing
+
+Run the automated unit tests with:
+
+```bash
+python -m unittest discover -s tests
+```
+
+The tests cover forced captures, no-move handling, input-board immutability, and
+deterministic behavior for the random baseline.
 
 ## How the AI Works
 
